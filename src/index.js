@@ -8,13 +8,13 @@ import configureStore from './store';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Login from '../src/login';
 import Note from '../src/note';
-
+import App from '../src/person';
 
 ReactDOM.render(<BrowserRouter forceRefresh={false}>
   <Provider store={configureStore()}>
     <Switch>
       <Route exact path="/Note" component={Note} />
-      <Route exact path="/" component={Login} />
+      <Route exact path="/" component={App} />
     </Switch>
   </Provider>,
     </BrowserRouter>, document.getElementById('root')
