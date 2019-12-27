@@ -6,17 +6,18 @@ import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux'
 import configureStore from './store';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Login from '../src/login';
+//import Login from '../src/login';
 import Note from '../src/note';
-import App from '../src/person';
+//import App from '../src/person';
+import Filter from './filter';
 
 ReactDOM.render(<BrowserRouter forceRefresh={false}>
   <Provider store={configureStore()}>
     <Switch>
       <Route exact path="/Note" component={Note} />
-      <Route exact path="/" component={App} />
+      <Route exact path="/" component={Filter} />
     </Switch>
-  </Provider>,
+  </Provider>
     </BrowserRouter>, document.getElementById('root')
 );
 
